@@ -21,17 +21,17 @@ const winningConditions = [
     [2, 4, 6]
 ];
 
-function handleCellPlayed(clickedCell, clickedCellIndex) {
+function handleCellPlayed(clickedCell, clickedCellIndex){
     gameState[clickedCellIndex] = currentPlayer;
     clickedCell.innerHTML = currentPlayer;
 }
 
-function handlePlayerChange() {
+function handlePlayerChange(){
     currentPlayer = currentPlayer === "X" ? "O" : "X";
     statusDisplay.innerHTML = currentPlayerTurn();
 }
 
-function handleResultValidation() {
+function handleResultValidation(){
     let roundWon = false;
     let a;
     let b;
